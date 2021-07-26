@@ -1,5 +1,13 @@
 $(function(){
 
+	var swiper = new Swiper(".mySwiper", {
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+			dynamicBullets: true,
+    },
+  });
+
   var i = 0;
 
   // 브라우저 시작시 color 강제실행
@@ -12,7 +20,7 @@ $(function(){
 		
 		if(delta<0){
 			// 메인 이미지 변경
-			if(i<3){
+			if(i<4){
 				i++;
 
 				//main_img
@@ -74,13 +82,13 @@ $(function(){
 				
 				//sub_title_txt
 				$('.sub_title_txt>ul>li').eq(i-1).stop().animate({
-					'right':'-50%'
-				}, 400, 'easeInCubic', function(){
+					'right':'-100%'
+				}, 500, 'easeInCubic', function(){
 					$('.sub_title_txt>ul>li').eq(i).css({
-						'right':'-50%'
+						'right':'-100%'
 					}).stop().animate({
 						'right':'0'
-					}, 400, 'easeOutCubic');
+					}, 500, 'easeOutCubic');
 				});
 				
 				//main_bg
@@ -91,6 +99,9 @@ $(function(){
 					$('#main_bg').removeClass();
 					$('#main_bg').addClass('color'+i);
 				}else if(i==2){
+					$('#main_bg').removeClass();
+					$('#main_bg').addClass('color'+i);
+				}else if(i==3){
 					$('#main_bg').removeClass();
 					$('#main_bg').addClass('color'+i);
 				}else{
@@ -163,13 +174,13 @@ $(function(){
 				
 				//sub_title_txt
 				$('.sub_title_txt>ul>li').eq(i+1).stop().animate({
-					'right':'-50%'
-				}, 400, 'easeInCubic', function(){
+					'right':'-100%'
+				}, 500, 'easeInCubic', function(){
 					$('.sub_title_txt>ul>li').eq(i).css({
-						'right':'-50%'
+						'right':'-100%'
 					}).stop().animate({
 						'right':'0'
-					}, 400, 'easeOutCubic');
+					}, 500, 'easeOutCubic');
 				});
 				
 				//main_bg
@@ -183,6 +194,9 @@ $(function(){
 					$('#main_bg').removeClass();
 					$('#main_bg').addClass('color'+i);
 				}else if(i==2){
+					$('#main_bg').removeClass();
+					$('#main_bg').addClass('color'+i);
+				}else if(i==3){
 					$('#main_bg').removeClass();
 					$('#main_bg').addClass('color'+i);
 				}
@@ -215,6 +229,9 @@ $(function(){
 		}else if(i==2){
 			$('#main_bg').removeClass();
 			$('#main_bg').addClass('color'+nav_index);
+		}else if(i==3){
+			$('#main_bg').removeClass();
+			$('#main_bg').addClass('color'+nav_index);
 		}else{
 			$('#main_bg').removeClass();
 			$('#main_bg').addClass('color'+nav_index);
@@ -222,13 +239,13 @@ $(function(){
 
 		//sub_title_txt
 		$('.sub_title_txt>ul>li').eq(i).stop().animate({
-			'right':'-50%'
-		}, 400, 'easeInCubic', function(){
+			'right':'-100%'
+		}, 500, 'easeInCubic', function(){
 			$('.sub_title_txt>ul>li').eq(nav_index).css({
-				'right':'-50%'
+				'right':'-100%'
 			}).stop().animate({
 				'right':'0'
-			}, 400, 'easeOutCubic');
+			}, 500, 'easeOutCubic');
 		});
 		
 		//main_img
@@ -288,8 +305,6 @@ $(function(){
 		});
 		i = nav_index;
 	}
-
-
 
   // scroll 이벤트
   setInterval(function(){
