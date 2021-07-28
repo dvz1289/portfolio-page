@@ -1,8 +1,8 @@
 $(function(){
 
-	var swiper = new Swiper(".mySwiper", {
+	var swiper = new Swiper('.mySwiper', {
     pagination: {
-      el: ".swiper-pagination",
+      el: '.swiper-pagination',
       clickable: true,
 			dynamicBullets: true,
     },
@@ -142,7 +142,7 @@ $(function(){
 				//main_title
 				$('.main_title>ul>li').eq(i+1).find('.wrap').css('transform-origin','top center').stop().animate({
 					'transform':'scaleY(1.5)',
-					'opacity':'0'
+					'opacity':'0',
 				},400, 'easeInCubic', function(){
 					$('.main_title>ul>li').eq(i).find('.wrap').css({
 						'opacity':'0',
@@ -317,4 +317,28 @@ $(function(){
 		});
 	},4000);
 
+	$('.chart').easyPieChart({
+		barColor: '#1c88c7',
+		trackColor: '#c3dceb',
+		scaleColor: false,
+		lineCap: 'round',
+		lineWidth: 10,
+		size: 100,
+		onStart: $.noop,
+		onStop: $.noop,
+		animate: 1000,
+	});
+
+	let skill = document.querySelector('#skill');
+	var skill_check = window.getComputedStyle(skill).display;
+	
+	$('#skill').each(function(){
+		if(skill_check == 'block'){
+			console.log('참');
+		} else if(skill_check == 'none') {
+			console.log('거짓');
+		} else {
+			console.log('개망');
+		}
+	});
 });
