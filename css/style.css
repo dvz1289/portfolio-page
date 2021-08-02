@@ -87,7 +87,7 @@ body{position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-col
 #main .category .main_title .skill_list li:nth-of-type(5),
 #main .category .main_title .skill_list li:nth-of-type(6){margin-bottom: 0;}
 #main .category .main_title .skill_list .chart{position: relative; width: 100%; height: 100px; display: table;}
-#main .category .main_title .skill_list .skill .percent{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+#main .category .main_title .skill_list .skill .percent{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: .5s;}
 #main .category .main_title .skill_list .skill .percent:after{content: '%';}
 #main .category .main_title .skill_list .skill canvas {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 #main .category .main_title .skill_list .skill .txt{font-weight: 300; display: block; text-align: center; margin-top: 20px;}
@@ -120,11 +120,13 @@ body{position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-col
 #main .category .main_title .project .wrap .slide_list .slide:nth-of-type(3) h3:after{content: '21. 02';}
 #main .category .main_title .project .wrap .slide_list .slide:nth-of-type(4) h3:after{content: '21. 01';}
 #main .category .main_title .project .wrap .slide_list .slide:nth-of-type(5) h3:after{content: '20. 12';}
+#main .category .main_title .project .wrap .slide_list .slide:nth-of-type(6) h3:after{content: '20. 08';}
+#main .category .main_title .project .wrap .slide_list .slide:nth-of-type(7) h3:after{content: '20. 08';}
 #main .category .main_title .project .wrap .slide_list .txt_wrap p{padding: 0 8px; font-size: 16px; color: #444; opacity: 0; transform: translateY(30px); transition: .5s;}
 
 #main .category .main_title .project .wrap .slide_list .btn_wrap{float: left; width: 50%; text-align: right; opacity: 0; transform: translateY(30px); transition: .5s;}
 #main .category .main_title .project .wrap .slide_list .btn_wrap li{width: 100%; margin-bottom: 15px;}
-#main .category .main_title .project .wrap .slide_list .btn_wrap li a{position: relative; display: inline-block; width: 90px; height: 35px; margin-right: 35px; text-align: center; border: 1px solid #444; border-radius: 35px; cursor: pointer; background-color: transparent; transition: .3s; overflow: hidden;}
+#main .category .main_title .project .wrap .slide_list .btn_wrap li a{position: relative; display: inline-block; width: 90px; height: 35px; margin-right: 25px; text-align: center; border: 1px solid #444; border-radius: 35px; cursor: pointer; background-color: transparent; transition: .3s; overflow: hidden;}
 #main .category .main_title .project .wrap .slide_list .btn_wrap li a:hover{border-color: #7880e9;}
 #main .category .main_title .project .wrap .slide_list .btn_wrap li a::after{content: ''; position: absolute; display: block; left: 0; top: 0; width: 100%; height: 100%; border-radius: 35px; background-color: #7880e9; transform: scaleX(0.5); opacity: 0; z-index: -1; transition: .7s;}
 #main .category .main_title .project .wrap .slide_list .btn_wrap li a:hover::after{transform: scale(1.5, 1.5); opacity: 1;}
@@ -136,6 +138,8 @@ body{position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-col
 #main .category .main_title .project .wrap input[id="slide03"]:checked ~ .slide_container .slide_list>li{transform: translateX(-200%);}
 #main .category .main_title .project .wrap input[id="slide04"]:checked ~ .slide_container .slide_list>li{transform: translateX(-300%);}
 #main .category .main_title .project .wrap input[id="slide05"]:checked ~ .slide_container .slide_list>li{transform: translateX(-400%);}
+#main .category .main_title .project .wrap input[id="slide06"]:checked ~ .slide_container .slide_list>li{transform: translateX(-500%);}
+#main .category .main_title .project .wrap input[id="slide07"]:checked ~ .slide_container .slide_list>li{transform: translateX(-600%);}
 
 #main .category .main_title .project .wrap input[id="slide01"]:checked ~ .slide_container li:nth-child(1) .txt_wrap h3{opacity: 1; transform: translateY(0); transition-delay: .2s;}
 #main .category .main_title .project .wrap input[id="slide01"]:checked ~ .slide_container li:nth-child(1) .txt_wrap p{opacity: 1; transform: translateY(0); transition-delay: .4s;}
@@ -157,6 +161,12 @@ body{position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-col
 #main .category .main_title .project .wrap input[id="slide05"]:checked ~ .slide_container li:nth-child(5) .txt_wrap p{opacity: 1; transform: translateY(0); transition-delay: .4s;}
 #main .category .main_title .project .wrap input[id="slide05"]:checked ~ .slide_container li:nth-child(5) .btn_wrap{opacity: 1; transform: translateY(0); transition-delay: .6s;}
 
+#main .category .main_title .project .wrap input[id="slide06"]:checked ~ .slide_container li:nth-child(6) .txt_wrap h3{opacity: 1; transform: translateY(0); transition-delay: .2s;}
+#main .category .main_title .project .wrap input[id="slide06"]:checked ~ .slide_container li:nth-child(6) .txt_wrap p{opacity: 1; transform: translateY(0); transition-delay: .4s;}
+
+#main .category .main_title .project .wrap input[id="slide07"]:checked ~ .slide_container li:nth-child(7) .txt_wrap h3{opacity: 1; transform: translateY(0); transition-delay: .2s;}
+#main .category .main_title .project .wrap input[id="slide07"]:checked ~ .slide_container li:nth-child(7) .txt_wrap p{opacity: 1; transform: translateY(0); transition-delay: .4s;}
+
 #main .category .main_title .project .wrap .slide_container .page_list{position: absolute; left: 50%; bottom: 15px; text-align: center; transform: translateX(-50%);}
 #main .category .main_title .project .wrap .slide_container .page_list>li{display: inline-block; vertical-align: middle;}
 #main .category .main_title .project .wrap .slide_container .page_list>li>label{display: block; padding: 8px 8px;  background: #bec3ff; margin: 20px 5px; cursor: pointer;}
@@ -165,6 +175,8 @@ body{position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-col
 #main .category .main_title .project .wrap input[id='slide03']:checked ~ .slide_container .page_list>li:nth-child(3)>label{background: #7880e9;}
 #main .category .main_title .project .wrap input[id='slide04']:checked ~ .slide_container .page_list>li:nth-child(4)>label{background: #7880e9;}
 #main .category .main_title .project .wrap input[id='slide05']:checked ~ .slide_container .page_list>li:nth-child(5)>label{background: #7880e9;}
+#main .category .main_title .project .wrap input[id='slide06']:checked ~ .slide_container .page_list>li:nth-child(6)>label{background: #7880e9;}
+#main .category .main_title .project .wrap input[id='slide07']:checked ~ .slide_container .page_list>li:nth-child(7)>label{background: #7880e9;}
 
 /* right_menu */
 
@@ -188,6 +200,8 @@ body{position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-col
 #right_menu .sub_title>ul .about .profile{margin-bottom: 20px;}
 #right_menu .sub_title>ul .about .profile p{font: 20px 'Pretendard-Regular'; color: #444;}
 
+#right_menu .sub_title>ul .skill h2{font: 48px 'Pretendard-Bold'; color: #444; text-transform: uppercase;}
+
 /* sub_txt */
 
 #right_menu .sub_title_txt{width: 100%; height: 100%;}
@@ -198,7 +212,13 @@ body{position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-col
 #right_menu .sub_title_txt>ul .home{bottom: 130px; font: 36px 'Pretendard-Regular'; padding: 15px 0;}
 #right_menu .sub_title_txt>ul .home p{font-size: 24px; font-weight: normal;}
 
-#right_menu .sub_title_txt>ul .about{bottom: 0; font: 20px 'Pretendard-Regular'; padding: 25px 0 15px;}
+#right_menu .sub_title_txt>ul .about{bottom: 0; font: 20px 'Pretendard-Regular'; color: #444; padding: 25px 0 15px;}
+
+#right_menu .sub_title_txt>ul .skill{bottom: -17px;}
+#right_menu .sub_title_txt>ul .skill .txt_wrap{margin-bottom: 25px; color: #444;}
+#right_menu .sub_title_txt>ul .skill .txt_wrap:first-of-type{margin-top: 25px;}
+#right_menu .sub_title_txt>ul .skill .txt_wrap h2{margin-bottom: 10px; font: bold 24px 'Pretendard-Regular';}
+#right_menu .sub_title_txt>ul .skill .txt_wrap p{font: 18px 'Pretendard-Regular';}
 
 /* nav */
 

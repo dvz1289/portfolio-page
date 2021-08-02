@@ -18,6 +18,32 @@ $(function(){
   function wheel(e, delta){
 		$('html, body').off('mousewheel DOMMousescroll', wheel);
 		
+		function pieChart(){
+			var skill = document.querySelector('#skill');
+			var skill_check = window.getComputedStyle(skill).display;
+
+			function setPieChart(){
+				$('.chart').easyPieChart({
+					barColor: '#1c88c7',
+					trackColor: '#c3dceb',
+					scaleColor: false,
+					lineCap: 'round',
+					lineWidth: 10,
+					size: 100,
+					onStart: $.noop,
+					onStop: $.noop,
+					animate: 1000,
+				});
+			}
+			
+			$('#skill').each(function(){
+				if(skill_check == 'block'){
+					setPieChart();
+					$('#skill .chart .percent').css({'opacity':'1'});
+				}
+			});
+		}
+		
 		if(delta<0){
 			// 메인 이미지 변경
 			if(i<4){
@@ -40,6 +66,7 @@ $(function(){
 						$('#gnb li').eq(i).addClass('on');
 						$('#nav li').eq(i-1).removeClass('on');
 						$('#nav li').eq(i).addClass('on');
+						pieChart();
 					});
 					setTimeout(function(){
 						$('html, body').on('mousewheel DOMMousescroll', wheel);
@@ -133,6 +160,7 @@ $(function(){
 						$('#gnb li').eq(i).addClass('on');
 						$('#nav li').eq(i+1).removeClass('on');
 						$('#nav li').eq(i).addClass('on');
+						pieChart();
 					});
 					setTimeout(function(){
 						$('html, body').on('mousewheel DOMMousescroll', wheel);
@@ -211,9 +239,7 @@ $(function(){
 	$('#gnb li').on('click', nav_click);
 
 	function nav_click(){
-		var nav_index = $(this).index(),
-				win_width = $(window).width(),
-				nav_left = $(this).offset().left;
+		var nav_index = $(this).index();
 		
 		if(i == nav_index) return;
 		$('#nav .nav_wrap li').off('click', nav_click);
@@ -265,6 +291,7 @@ $(function(){
 					$('#gnb li').eq(i).addClass('on');
 					$('#nav li').not(i).removeClass('on');
 					$('#nav li').eq(nav_index).addClass('on');
+					pieChart();
 				});
 			$('.nav_wrap>ul>li').on('click', nav_click);
 			$('#gnb li').on('click', nav_click);
@@ -317,28 +344,4 @@ $(function(){
 		});
 	},4000);
 
-	$('.chart').easyPieChart({
-		barColor: '#1c88c7',
-		trackColor: '#c3dceb',
-		scaleColor: false,
-		lineCap: 'round',
-		lineWidth: 10,
-		size: 100,
-		onStart: $.noop,
-		onStop: $.noop,
-		animate: 1000,
-	});
-
-	let skill = document.querySelector('#skill');
-	var skill_check = window.getComputedStyle(skill).display;
-	
-	$('#skill').each(function(){
-		if(skill_check == 'block'){
-			console.log('참');
-		} else if(skill_check == 'none') {
-			console.log('거짓');
-		} else {
-			console.log('개망');
-		}
-	});
 });
