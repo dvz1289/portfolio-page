@@ -90,7 +90,7 @@ body{position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-col
 #main .category .main_title .skill_list .skill .percent{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: .5s;}
 #main .category .main_title .skill_list .skill .percent:after{content: '%';}
 #main .category .main_title .skill_list .skill canvas {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
-#main .category .main_title .skill_list .skill .txt{font-weight: 300; display: block; text-align: center; margin-top: 20px;}
+#main .category .main_title .skill_list .skill .txt{font-weight: 300; display: block; text-align: center; margin-top: 20px; opacity: 0; transition: .5s;}
 #main .category .main_title .skill_list .skill li{opacity: 1; top: 0;}
 
 /* about */
