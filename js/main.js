@@ -8,6 +8,33 @@ $(function(){
     },
   });
 
+	function pieChart(){
+		var skill = document.querySelector('#skill');
+		var skill_check = window.getComputedStyle(skill).display;
+
+		function setPieChart(){
+			$('.chart').easyPieChart({
+				barColor: '#1c88c7',
+				trackColor: '#c3dceb',
+				scaleColor: false,
+				lineCap: 'round',
+				lineWidth: 10,
+				size: 100,
+				onStart: $.noop,
+				onStop: $.noop,
+				animate: 1000,
+			});
+		}
+		
+		$('#skill').each(function(){
+			if(skill_check == 'block'){
+				setPieChart();
+				$('#skill .chart .percent').css({'opacity':'1'});
+				$('#skill .txt').css({'opacity':'1'});
+			}
+		});
+	}
+
   var i = 0;
 
   // 브라우저 시작시 color 강제실행
@@ -17,32 +44,6 @@ $(function(){
 
   function wheel(e, delta){
 		$('html, body').off('mousewheel DOMMousescroll', wheel);
-		
-		function pieChart(){
-			var skill = document.querySelector('#skill');
-			var skill_check = window.getComputedStyle(skill).display;
-
-			function setPieChart(){
-				$('.chart').easyPieChart({
-					barColor: '#1c88c7',
-					trackColor: '#c3dceb',
-					scaleColor: false,
-					lineCap: 'round',
-					lineWidth: 10,
-					size: 100,
-					onStart: $.noop,
-					onStop: $.noop,
-					animate: 1000,
-				});
-			}
-			
-			$('#skill').each(function(){
-				if(skill_check == 'block'){
-					setPieChart();
-					$('#skill .chart .percent').css({'opacity':'1'});
-				}
-			});
-		}
 		
 		if(delta<0){
 			// 메인 이미지 변경

@@ -74,6 +74,12 @@ body{position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-col
 #main .category .main_title .home p:nth-of-type(2){margin: 25px 0 5px; font-size: 16px; color: #999;}
 #main .category .main_title .home p:nth-of-type(3){font-size: 38px; color: #444;}
 
+/* about */
+
+#main .category .main_title .about{position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+#main .category .main_title .about .img.wrap{text-align: center; height: 100%; overflow: hidden;}
+#main .category .main_title .about .img.wrap img{width: 100%;}
+
 /* skill */
 
 #main .category .main_title .skill{width: 100%; height: 100%;}
@@ -92,12 +98,6 @@ body{position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-col
 #main .category .main_title .skill_list .skill canvas {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 #main .category .main_title .skill_list .skill .txt{font-weight: 300; display: block; text-align: center; margin-top: 20px; opacity: 0; transition: .5s;}
 #main .category .main_title .skill_list .skill li{opacity: 1; top: 0;}
-
-/* about */
-
-#main .category .main_title .about{position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
-#main .category .main_title .about .img.wrap{text-align: center; height: 100%; overflow: hidden;}
-#main .category .main_title .about .img.wrap img{width: 100%;}
 
 /* project */
 
@@ -178,6 +178,12 @@ body{position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-col
 #main .category .main_title .project .wrap input[id='slide06']:checked ~ .slide_container .page_list>li:nth-child(6)>label{background: #7880e9;}
 #main .category .main_title .project .wrap input[id='slide07']:checked ~ .slide_container .page_list>li:nth-child(7)>label{background: #7880e9;}
 
+/* contact */
+
+#main .category .main_title .contact{position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+#main .category .main_title .contact .img.wrap{text-align: center; height: 100%; padding-top: 20%; overflow: hidden;}
+#main .category .main_title .contact .img.wrap img{width: 60%;}
+
 /* right_menu */
 
 #right_menu{position: absolute; top: 10%; right: 8%; width: 700px; height: 70%; overflow: hidden;}
@@ -202,6 +208,9 @@ body{position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-col
 
 #right_menu .sub_title>ul .skill h2{font: 48px 'Pretendard-Bold'; color: #444; text-transform: uppercase;}
 
+#right_menu .sub_title>ul .project{margin-top: 25%; margin-bottom: 25px;}
+#right_menu .sub_title>ul .project h2{font: 48px 'Pretendard-Bold'; color: #444; text-transform: uppercase;}
+
 /* sub_txt */
 
 #right_menu .sub_title_txt{width: 100%; height: 100%;}
@@ -219,6 +228,11 @@ body{position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-col
 #right_menu .sub_title_txt>ul .skill .txt_wrap:first-of-type{margin-top: 25px;}
 #right_menu .sub_title_txt>ul .skill .txt_wrap h2{margin-bottom: 10px; font: bold 24px 'Pretendard-Regular';}
 #right_menu .sub_title_txt>ul .skill .txt_wrap p{font: 18px 'Pretendard-Regular';}
+
+#right_menu .sub_title_txt>ul .project{bottom: 120px; color: #444;}
+#right_menu .sub_title_txt>ul .project:first-of-type{margin-top: 25px;}
+#right_menu .sub_title_txt>ul .project h2{margin-bottom: 25px; font: bold 30px 'Pretendard-Regular';}
+#right_menu .sub_title_txt>ul .project p{margin-bottom: 15px; font: 18px 'Pretendard-Regular';}
 
 /* nav */
 
