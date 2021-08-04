@@ -77,13 +77,15 @@ $(function(){
 				//main_title
 				$('.main_title>ul>li').eq(i-1).find('.wrap').css('transform-origin','bottom center').stop().animate({
 					'transform':'scaleY(1.5)',
-					'opacity':'0'
+					'opacity':'0',
+					'z-index':'995'
 				},400, 'easeInCubic', function(){
 					$('.main_title>ul>li').eq(i).find('.wrap').css({
 						'opacity':'0',
 						'display':'block',
 						'transform-origin':'top center',
-						'transform':'scaleY(1.5)'
+						'transform':'scaleY(1.5)',
+						'z-index':'999'
 						}).stop().animate({
 							'transform':'scaleY(1)',
 							'opacity':'1'
@@ -172,11 +174,13 @@ $(function(){
 				$('.main_title>ul>li').eq(i+1).find('.wrap').css('transform-origin','top center').stop().animate({
 					'transform':'scaleY(1.5)',
 					'opacity':'0',
+					'z-index':'995'
 				},400, 'easeInCubic', function(){
 					$('.main_title>ul>li').eq(i).find('.wrap').css({
 						'opacity':'0',
 						'display':'block',
-						'transform-origin':'bottom center'
+						'transform-origin':'bottom center',
+						'z-index':'999'
 						}).stop().animate({
 							'transform':'scaleY(1)',
 							'opacity':'1'
@@ -301,13 +305,15 @@ $(function(){
 		//main_title
 		$('.main_title>ul>li').eq(i).find('.wrap').css('transform-origin','bottom center').stop().animate({
 			'transform':'scaleY(1.5)',
-			'opacity':'0'
+			'opacity':'0',
+			'z-index':'995'
 		},400, 'easeInCubic', function(){
 			$('.main_title>ul>li').eq(nav_index).find('.wrap').css({
 				'opacity':'0',
 				'display':'block',
 				'transform-origin':'top center',
-				'transform':'scaleY(1.5)'
+				'transform':'scaleY(1.5)',
+				'z-index':'999'
 				}).stop().animate({
 					'transform':'scaleY(1)',
 					'opacity':'1'
