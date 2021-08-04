@@ -22,7 +22,7 @@ ul, ol, li{list-style: none;}
 a{text-decoration: none;}
 
 body{position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #cbdfe7; overflow: hidden;}
-.main_wrap{position: absolute; bottom: 0; right: 5%; width: 90%; height: calc(100% - 100px); overflow: hidden;}
+.main_wrap{position: absolute; bottom: 100px; right: 5%; width: 90%; height: calc(100% - 260px); overflow: hidden;}
 .ico_wrap:after{content:''; display:block; clear:both;}
 
 /* header */
@@ -237,8 +237,8 @@ body{position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-col
 
 /* nav */
 
-#nav{position: absolute; bottom: 0; left: 0; width: 5%; height: calc(100% - 100px);}
-#nav .nav_wrap{position: absolute; left: 50%; bottom: 5%; transform: translateX(-50%);}
+#nav{position: absolute; bottom: 60px; left: 0; width: 5%; height: calc(100% - 160px);}
+#nav .nav_wrap{position: absolute; left: 50%; bottom: 0; transform: translateX(-50%);}
 #nav .nav_wrap ul{width: 100%; text-align: center;}
 #nav .nav_wrap ul li{height: 65px;}
 #nav .nav_wrap ul li a{display: block; width: 100%; color: #444;}
@@ -248,18 +248,25 @@ body{position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-col
 #nav .nav_wrap ul li:last-of-type a i{font: 900 22px/65px 'Font Awesome 5 free';}
 #nav .nav_wrap ul li a:hover i{transform: scale(1.2);}
 
-#sns{position: absolute; bottom: 0; right: 0; width: 5%; height: calc(100% - 100px);}
-#sns .sns_wrap{position: absolute; left: 50%; bottom: 5%; transform: translateX(-50%);}
+#sns{position: absolute; bottom: 60px; right: 0; width: 5%; height: calc(100% - 160px);}
+#sns .sns_wrap{position: absolute; left: 50%; bottom: 0; transform: translateX(-50%);}
 #sns .sns_wrap ul{width: 100%; text-align: center;}
 #sns .sns_wrap ul li{width: 65px; height: 65px;}
 #sns .sns_wrap ul li a{display: block; width: 100%; color: #444;}
 #sns .sns_wrap ul li a i{font-size: 24px; line-height: 65px; transition: .3s;}
 #sns .sns_wrap ul li a:hover i{transform: scale(1.2);}
 
-.scroll_arrow{position: absolute; left: 50%; bottom: 6%; transform: translateX(-50%); height: 15px; z-index: 99; opacity: 1;}
+.scroll_arrow{position: absolute; left: 50%; bottom: 12%; transform: translateX(-50%); height: 15px; z-index: 99; opacity: 1;}
 .scroll_arrow:after{content: '\f063'; display: block; position: absolute; top: 25px; left: 50%; margin-top: 0; font: 900 13px 'Font Awesome 5 Free'; color: #999; transform: translateX(-50%); animation: motion 0.3s linear 0s infinite alternate;}
 .scroll_arrow .scroll_wrap{font-size: 16px; color: #999; overflow: hidden;}
 .scroll_arrow .scroll_wrap .scroll_txt{position: relative;}
+
+/* footer */
+
+#footer{position: absolute; bottom: 0; left: 0; width: 100%; height: 60px; overflow: hidden; background-color: #444;}
+#footer .copy{text-align: center;}
+#footer .copy p:first-of-type{padding-top: 15px;}
+#footer .copy p{font: 12px 'Pretendard-Regular'; color: #fff; margin-bottom: 3px;}
 
 @keyframes motion {
 	0% {margin-top: 0px;}
