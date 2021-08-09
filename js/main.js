@@ -15,11 +15,11 @@ $(function(){
 		function setPieChart(){
 			$('.chart').easyPieChart({
 				barColor: '#1c88c7',
-				trackColor: '#c3dceb',
-				scaleColor: false,
+				trackColor: '#fff',
+				scaleColor: '#444',
 				lineCap: 'round',
-				lineWidth: 10,
-				size: 100,
+				lineWidth: 12,
+				size: 140,
 				onStart: $.noop,
 				onStop: $.noop,
 				animate: 1000,
