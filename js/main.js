@@ -19,7 +19,7 @@ $(function(){
 				scaleColor: '#444',
 				lineCap: 'round',
 				lineWidth: 12,
-				size: 140,
+				size: 130,
 				onStart: $.noop,
 				onStop: $.noop,
 				animate: 1000,
