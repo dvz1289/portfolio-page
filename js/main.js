@@ -109,13 +109,7 @@ $(function(){
 					'opacity':'0',
 					'z-index':'995'
 				},400, 'easeInCubic', function(){
-					$('.main_title>ul>li').eq(i).find('.wrap').css({
-						'opacity':'0',
-						'display':'block',
-						'transform-origin':'top center',
-						'transform':'scaleY(1.5)',
-						'z-index':'999'
-						}).stop().animate({
+					$('.main_title>ul>li').eq(i).find('.wrap').css({'opacity':'0', 'display':'block', 'transform-origin':'top center', 'transform':'scaleY(1.5)', 'z-index':'999'}).stop().animate({
 							'transform':'scaleY(1)',
 							'opacity':'1'
 						},400, 'easeOutCubic');
@@ -128,11 +122,7 @@ $(function(){
 					'opacity':'0'
 				},700, 'easeInCubic', function(){
 					$('.sub_title>ul>li').eq(i-1).css('display','none');
-					$('.sub_title>ul>li').eq(i).css({
-						'display':'block',
-						'opacity':'0',
-						'top':'20px'
-					}).stop().animate({
+					$('.sub_title>ul>li').eq(i).css({'display':'block', 'opacity':'0', 'top':'20px'}).stop().animate({
 						'top':'0',
 						'opacity':'1',
 						'transform':'scaleY(1)'
@@ -143,9 +133,7 @@ $(function(){
 				$('.sub_title_txt>ul>li').eq(i-1).stop().animate({
 					'right':'-100%'
 				}, 500, 'easeInCubic', function(){
-					$('.sub_title_txt>ul>li').eq(i).css({
-						'right':'-100%'
-					}).stop().animate({
+					$('.sub_title_txt>ul>li').eq(i).css({'right':'-100%'}).stop().animate({
 						'right':'0'
 					}, 500, 'easeOutCubic');
 				});
@@ -205,12 +193,7 @@ $(function(){
 					'opacity':'0',
 					'z-index':'995'
 				},400, 'easeInCubic', function(){
-					$('.main_title>ul>li').eq(i).find('.wrap').css({
-						'opacity':'0',
-						'display':'block',
-						'transform-origin':'bottom center',
-						'z-index':'999'
-						}).stop().animate({
+					$('.main_title>ul>li').eq(i).find('.wrap').css({'opacity':'0', 'display':'block', 'transform-origin':'bottom center', 'z-index':'999'}).stop().animate({
 							'transform':'scaleY(1)',
 							'opacity':'1'
 						},400, 'easeOutCubic');
@@ -223,11 +206,7 @@ $(function(){
 					'opacity':'0'
 				},700, 'easeInCubic', function(){
 					$('.sub_title>ul>li').eq(i+1).css('display','none');
-					$('.sub_title>ul>li').eq(i).css({
-						'display':'block',
-						'opacity':'0',
-						'top':'-20px'
-					}).stop().animate({
+					$('.sub_title>ul>li').eq(i).css({'display':'block', 'opacity':'0', 'top':'-20px'}).stop().animate({
 						'top':'0',
 						'opacity':'1',
 						'transform':'scaleY(1)'
@@ -238,9 +217,7 @@ $(function(){
 				$('.sub_title_txt>ul>li').eq(i+1).stop().animate({
 					'right':'-100%'
 				}, 500, 'easeInCubic', function(){
-					$('.sub_title_txt>ul>li').eq(i).css({
-						'right':'-100%'
-					}).stop().animate({
+					$('.sub_title_txt>ul>li').eq(i).css({'right':'-100%'}).stop().animate({
 						'right':'0'
 					}, 500, 'easeOutCubic');
 				});
@@ -301,9 +278,7 @@ $(function(){
 		$('.sub_title_txt>ul>li').eq(i).stop().animate({
 			'right':'-100%'
 		}, 500, 'easeInCubic', function(){
-			$('.sub_title_txt>ul>li').eq(nav_index).css({
-				'right':'-100%'
-			}).stop().animate({
+			$('.sub_title_txt>ul>li').eq(nav_index).css({'right':'-100%'}).stop().animate({
 				'right':'0'
 			}, 500, 'easeOutCubic');
 		});
@@ -337,13 +312,7 @@ $(function(){
 			'opacity':'0',
 			'z-index':'995'
 		},400, 'easeInCubic', function(){
-			$('.main_title>ul>li').eq(nav_index).find('.wrap').css({
-				'opacity':'0',
-				'display':'block',
-				'transform-origin':'top center',
-				'transform':'scaleY(1.5)',
-				'z-index':'999'
-				}).stop().animate({
+			$('.main_title>ul>li').eq(nav_index).find('.wrap').css({'opacity':'0', 'display':'block', 'transform-origin':'top center', 'transform':'scaleY(1.5)', 'z-index':'999'}).stop().animate({
 					'transform':'scaleY(1)',
 					'opacity':'1'
 				},400, 'easeOutCubic');
@@ -356,11 +325,7 @@ $(function(){
 			'opacity':'0'
 		},700, 'easeInCubic', function(){
 			$('.sub_title>ul>li').css('display','none');
-			$('.sub_title>ul>li').eq(nav_index).css({
-				'display':'block',
-				'opacity':'0',
-				'top':'20px'
-			}).stop().animate({
+			$('.sub_title>ul>li').eq(nav_index).css({'display':'block', 'opacity':'0', 'top':'20px'}).stop().animate({
 				'top':'0',
 				'opacity':'1',
 				'transform':'scaleY(1)'
