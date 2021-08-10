@@ -83,10 +83,10 @@ $(function(){
 				$('.main_img>ul>li').eq(i-1).stop().animate({
 					'top':'-250%',
 					'left':'-50%',
-					'transform':'rotate(-90deg) scale(0.5)',
+					'transform':'rotate(-150deg) scale(0.5)',
 					'opacity':'0'
 				},700, 'easeInCubic', function(){
-					$('.main_img>ul>li').eq(i).css({'top':'120%','transform':'rotate(120deg) scale(0.5)','left':'50%'}).stop().animate({
+					$('.main_img>ul>li').eq(i).css({'top':'120%','transform':'rotate(150deg) scale(0.5)','left':'50%'}).stop().animate({
 						'top':'0',
 						'left':'0',
 						'transform':'rotate(0deg) scale(1)',
@@ -179,10 +179,10 @@ $(function(){
 				$('.main_img>ul>li').eq(i+1).stop().animate({
 					'top':'120%',
 					'left':'50%',
-					'transform':'rotate(120deg) scale(0.5)',
+					'transform':'rotate(150deg) scale(0.5)',
 					'opacity':'0'
 				},700, 'easeInCubic', function(){
-					$('.main_img>ul>li').eq(i).css({'top':'-150%','transform':'rotate(-90deg) scale(0.5)','left':'-50%'}).stop().animate({
+					$('.main_img>ul>li').eq(i).css({'top':'-150%','transform':'rotate(-150deg) scale(0.5)','left':'-50%'}).stop().animate({
 						'top':'0',
 						'left':'0',
 						'transform':'rotate(0deg) scale(1)',
@@ -312,10 +312,10 @@ $(function(){
 		$('.main_img>ul>li').eq(i).stop().animate({
 			'top':'-150%',
 			'left':'-50%',
-			'transform':'rotate(-90deg) scale(0.5)',
+			'transform':'rotate(-150deg) scale(0.5)',
 			'opacity':'0'
 		},700, 'easeInCubic', function(){
-			$('.main_img>ul>li').eq(nav_index).css({'top':'120%','transform':'rotate(120deg) scale(0.5)','left':'50%'}).stop().animate({
+			$('.main_img>ul>li').eq(nav_index).css({'top':'120%','transform':'rotate(150deg) scale(0.5)','left':'50%'}).stop().animate({
 				'top':'0',
 				'left':'0',
 				'transform':'rotate(0deg) scale(1)',
@@ -379,5 +379,23 @@ $(function(){
 			},600);
 		});
 	},4000);
+
+	$(window).ready(function(){
+		var t = 3;
+		
+		//start_popup, start_timer
+		$("#start_popup").addClass("on");
+		$(".timer_seconds").text(t);
+		
+		setInterval(function(){
+			t--;
+			$(".timer_seconds").text(t);
+			
+			if(t<=0){
+				t=0;
+				$("#start_popup").stop().fadeOut();
+			}
+		},1000);
+	});
 
 });
