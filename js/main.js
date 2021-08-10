@@ -1,5 +1,8 @@
 $(function(){
 
+	var $win = $(window),
+			win_w = $win.width();
+
 	var swiper = new Swiper('.mySwiper', {
     pagination: {
       el: '.swiper-pagination',
@@ -13,17 +16,43 @@ $(function(){
 		var skill_check = window.getComputedStyle(skill).display;
 
 		function setPieChart(){
-			$('.chart').easyPieChart({
-				barColor: '#1c88c7',
-				trackColor: '#fff',
-				scaleColor: '#444',
-				lineCap: 'round',
-				lineWidth: 12,
-				size: 130,
-				onStart: $.noop,
-				onStop: $.noop,
-				animate: 1000,
-			});
+			if(win_w > 1600){
+				$('.chart').easyPieChart({
+					barColor: '#3f48be',
+					trackColor: '#fff',
+					scaleColor: '#444',
+					lineCap: 'round',
+					lineWidth: 12,
+					size: 130,
+					onStart: $.noop,
+					onStop: $.noop,
+					animate: 1000,
+				});
+			} else if(win_w > 1250){
+				$('.chart').easyPieChart({
+					barColor: '#3f48be',
+					trackColor: '#fff',
+					scaleColor: '#444',
+					lineCap: 'round',
+					lineWidth: 12,
+					size: 110,
+					onStart: $.noop,
+					onStop: $.noop,
+					animate: 1000,
+				});
+			} else if(win_w > 960){
+				$('.chart').easyPieChart({
+					barColor: '#3f48be',
+					trackColor: '#fff',
+					scaleColor: '#444',
+					lineCap: 'round',
+					lineWidth: 5,
+					size: 70,
+					onStart: $.noop,
+					onStop: $.noop,
+					animate: 1000,
+				});
+			}
 		}
 		
 		$('#skill').each(function(){
@@ -52,7 +81,7 @@ $(function(){
 
 				//main_img
 				$('.main_img>ul>li').eq(i-1).stop().animate({
-					'top':'-150%',
+					'top':'-250%',
 					'left':'-50%',
 					'transform':'rotate(-90deg) scale(0.5)',
 					'opacity':'0'
